@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Success</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        .flask-button {
+            background-color: #4CAF50;
+            margin-top: 10px;
+        }
+        .flask-button:hover {
+            background-color: #388E3C;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Successful</h2>
+        <p>Welcome, you have successfully logged in!</p>
+        <button onclick="window.location.href='/home'">Go to Home</button>
+        <button class="flask-button" onclick="window.location.href='{% url 'access_flask_app' %}'">Go to Flask App</button>
+    </div>
+</body>
+</html>

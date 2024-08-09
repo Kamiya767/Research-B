@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to the Home Page</h2>
+        <button onclick="window.location.href='{% url 'login' %}'">Login</button>
+        <button onclick="window.location.href='{% url 'register' %}'">Register</button>
+        <button onclick="window.location.href='{% url 'login_log' %}'">Login Log</button>
+    </div>
+</body>
+</html>

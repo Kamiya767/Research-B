@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Performance Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .form-container {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Performance Test</h1>
+    <div class="form-container">
+        <form method="POST">
+            <label for="api_url">API URL:</label><br>
+            <input type="text" id="api_url" name="api_url" required><br>
+            <input type="submit" value="Test API Performance">
+        </form>
+    </div>
+</body>
+</html>

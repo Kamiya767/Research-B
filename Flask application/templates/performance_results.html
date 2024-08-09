@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Performance Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .results-container {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Performance Test Results</h1>
+    <div class="results-container">
+        <h2>Target URL: {{ target_url }}</h2>
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Number of Requests</td>
+                <td>{{ results.num_requests }}</td>
+            </tr>
+            <tr>
+                <td>Average Response Time</td>
+                <td>{{ results.average_response_time }} seconds</td>
+            </tr>
+            <tr>
+                <td>Min Response Time</td>
+                <td>{{ results.min_response_time }} seconds</td>
+            </tr>
+            <tr>
+                <td>Max Response Time</td>
+                <td>{{ results.max_response_time }} seconds</td>
+            </tr>
+            <tr>
+                <td>Standard Deviation of Response Time</td>
+                <td>{{ results.stddev_response_time }} seconds</td>
+            </tr>
+            <tr>
+                <td>Throughput</td>
+                <td>{{ results.throughput }} requests/second</td>
+            </tr>
+            <tr>
+                <td>Error Rate</td>
+                <td>{{ results.error_rate }}%</td>
+            </tr>
+            <tr>
+                <td>Average Response Size</td>
+                <td>{{ results.avg_response_size }} bytes</td>
+            </tr>
+            <tr>
+                <td>Status Code Distribution</td>
+                <td>{{ results.status_code_distribution }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

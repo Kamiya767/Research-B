@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        form {
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #004494;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spam Email Detection</h1>
+    <form method="post">
+        <textarea name="email" rows="10" cols="30" placeholder="Enter email text here..."></textarea><br>
+        <input type="submit" value="Check for Spam">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
+

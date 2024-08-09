@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #004085;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            margin-top: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 80%;
+            text-align: left;
+        }
+        p {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan Results for {{ target_url }}</h1>
+    {% if alerts %}
+        <ul>
+        {% for alert in alerts %}
+            <li>
+                <strong>{{ alert['alert'] }}</strong>: {{ alert['risk'] }} Risk at {{ alert['url'] }}
+                <br>Detail: {{ alert['description'] }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No vulnerabilities found.</p>
+    {% endif %}
+</body>
+</html>
